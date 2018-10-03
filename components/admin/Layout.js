@@ -1,19 +1,22 @@
 import React from 'react'
 import { Normalize, SystemFont } from '@jonasknutsen/styled-jsx-globals'
 
-import Header from './Header'
-import Footer from './Footer'
-import GaWrapper from '../lib/analytics'
+import AdminHeader from './Header'
+import AdminFooter from './Footer'
+import AdminMenu from './Menu'
 
-const Layout = (props) => (
+const AdminLayout = (props) => (
   <div className='wrapper'>
     <Normalize />
     <SystemFont />
-    <Header />
+    <AdminHeader />
     <main>
-      {props.children}
+      <AdminMenu />
+      <section>
+        {props.children}
+      </section>
     </main>
-    <Footer />
+    <AdminFooter />
     <style jsx global>{`
       body {
         font-size: 16px;
@@ -29,12 +32,12 @@ const Layout = (props) => (
       }
       main {
         width: 100%;
-        max-width: 1000px;
         margin: 0 auto;
         flex: 1;
+        display: flex;
       }
     `}</style>
   </div>
 )
 
-export default GaWrapper(Layout)
+export default AdminLayout
