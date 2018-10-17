@@ -8,7 +8,7 @@ class Header extends React.Component {
         <div className='user'>Kalle Kanon</div>
         <style jsx>{`
           header {
-            background-color: #696969;
+            background-color: #595959;
             color: #fff;
             font-weight: 700;
             padding: .3rem;

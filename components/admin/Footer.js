@@ -8,7 +8,7 @@ class Footer extends React.Component {
         <style jsx>{`
           footer {
             text-align: center;
-            background-color: #696969;
+            background-color: #595959;
             color: #fff;
           }
         `}</style>
